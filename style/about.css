@@ -28,7 +28,8 @@ body
         {
             background-color:var(--blackColor);
             color: var(--whiteColor);
-            display: flex;justify-content: space-between;
+            display: flex;
+            justify-content: space-between;
             padding: 10px;
             align-items: center;
         }
@@ -130,6 +131,7 @@ body
         {
             margin-top: 10px;
         }
+        
         .Informations
         {
             display: grid;
@@ -141,9 +143,15 @@ body
             ;
             margin-top: 10px;
         }
+            p
+                {
+                text-align: justify;
+                    text-justify: inter-word;
+                }
         .birthday
         {
             grid-area: birthday;
+            
         }
         .age 
         {
@@ -236,3 +244,61 @@ body
                 bottom: 10px;
 
             }
+           @media screen and (max-width:768px){
+           .navbar
+           {
+             flex-direction: column;
+             align-items: flex-start;
+
+           }
+           .navbarTitle
+           {
+             margin: 10px;
+           }
+           .menuItems
+           {
+            flex-direction: column;
+            row-gap: 15px;
+           }
+           a
+            {
+                font-size: 16px;
+               
+            } 
+            .content{
+                height: auto;
+            } 
+            .container
+            {
+                height: auto;
+            }
+            .contentBody
+            {
+                grid-template-areas: 
+                "personalImage"
+                "personalInformations"
+                "dataBoxes"
+
+                ;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+
+            }
+            .personalImage
+            {
+                height:600px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .dataBoxes
+            {
+                grid-template-areas: 
+                "box1 box2"
+                "box3 box4";
+                grid-template-columns: 1fr 1fr;
+                
+                
+            }
+            
+        }
+        
